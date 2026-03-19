@@ -68,7 +68,7 @@ export const PRODUCTS: Product[] = [
     longDescription: 'Notre mélange signature "Goûts & Saveurs". Une harmonie secrète de plus de 5 épices pour garantir la réussite de vos grillades et plats mijotés.',
     price: 3000,
     weight: '120g',
-    image: '/images/ImageMélange-d\'épices.jpg',
+    image: '/images/Image-Melange-epices.jpg',
     benefits: ['Équilibré', 'Polyvalent', 'Gain de temps'],
     uses: ['Barbecue', 'Poulet rôti', 'Légumes sautés'],
     category: 'Mixes'
