@@ -35,21 +35,9 @@ const Cart: React.FC = () => {
     try {
       const widget = FedaPay.init({
         public_key: FEDAPAY_CONFIG.publicKey,
-        environment: FEDAPAY_CONFIG.environment,
-        locale: 'fr',
         transaction: {
           amount: cartTotal,
           description: buildOrderDescription(),
-          custom_metadata: {
-            items: cart.map(item => ({
-              id: item.id,
-              name: item.name,
-              quantity: item.quantity,
-              price: item.price,
-              weight: item.weight,
-            })),
-            delivery_address: customerInfo.address,
-          },
         },
         customer: {
           email: customerInfo.email,
@@ -60,10 +48,7 @@ const Cart: React.FC = () => {
             country: 'bj',
           },
         },
-        currency: {
-          iso: FEDAPAY_CONFIG.currency,
-        },
-        onComplete: ({ reason, transaction }) => {
+        onComplete: function (reason: number, transaction: FedaPayTransaction) {
           if (reason === FedaPay.CHECKOUT_COMPLETED) {
             setTransactionRef(transaction.reference || `#${transaction.id}`);
             setPaymentStatus('success');

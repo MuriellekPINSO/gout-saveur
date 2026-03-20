@@ -31,7 +31,7 @@ interface FedaPayInitOptions {
     iso?: string;
   };
   container?: string;
-  onComplete?: (args: { reason: number; transaction: FedaPayTransaction }) => void;
+  onComplete?: (reason: number, transaction: FedaPayTransaction) => void;
 }
 
 interface FedaPayWidget {
