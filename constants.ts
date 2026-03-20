@@ -98,3 +98,14 @@ export const COMPANY_INFO = {
     whatsapp: "https://wa.me/22959350935"
   }
 };
+
+// ============================================
+// 🔑 FedaPay Configuration (Sandbox)
+// ============================================
+// La clé publique est lue depuis le fichier .env local
+// Variable: VITE_FEDAPAY_PUBLIC_KEY
+export const FEDAPAY_CONFIG = {
+  publicKey: import.meta.env.VITE_FEDAPAY_PUBLIC_KEY || "",
+  environment: "sandbox" as const,
+  currency: "XOF",
+};
