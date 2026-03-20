@@ -39,6 +39,9 @@ const Cart: React.FC = () => {
           amount: cartTotal,
           description: buildOrderDescription(),
         },
+        currency: {
+          iso: 'XOF',
+        },
         customer: {
           email: customerInfo.email,
           firstname: customerInfo.firstname,
@@ -48,14 +51,17 @@ const Cart: React.FC = () => {
             country: 'bj',
           },
         },
-        onComplete: function (reason: number, transaction: FedaPayTransaction) {
-          if (reason === FedaPay.CHECKOUT_COMPLETED) {
-            setTransactionRef(transaction.reference || `#${transaction.id}`);
+        onComplete(resp: any) {
+          const FedaPayGlobal = (window as any)['FedaPay'];
+          if (resp.reason === FedaPayGlobal.DIALOG_DISMISSED) {
+            console.log('Dialog dismissed');
+            setPaymentStatus('failed');
+          } else {
+            console.log('Transaction terminée:', resp.reason);
+            console.log('Transaction:', resp.transaction);
+            setTransactionRef(resp.transaction?.reference || `#${resp.transaction?.id}`);
             setPaymentStatus('success');
             clearCart();
-          } else {
-            // FedaPay.DIALOG_DISMISSED - User closed the dialog
-            setPaymentStatus('failed');
           }
         },
       });
