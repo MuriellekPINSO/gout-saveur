@@ -16,6 +16,7 @@ interface FedaPayInitOptions {
   transaction?: {
     amount: number;
     description: string;
+    callback_url?: string;
     custom_metadata?: Record<string, unknown>;
   };
   customer?: {

@@ -38,6 +38,7 @@ const Cart: React.FC = () => {
         transaction: {
           amount: cartTotal,
           description: buildOrderDescription(),
+          callback_url: window.location.href,
         },
         currency: {
           iso: 'XOF',
@@ -253,11 +254,6 @@ const Cart: React.FC = () => {
                   <span>Total</span>
                   <span>{cartTotal.toLocaleString('fr-FR')} FCFA</span>
                 </div>
-              </div>
-
-              {/* Sandbox Badge */}
-              <div className="mb-4 p-2 bg-amber-50 border border-amber-200 rounded-md text-center">
-                <span className="text-xs font-bold text-amber-700">🧪 MODE SANDBOX — Aucun paiement réel</span>
               </div>
 
               {paymentStatus === 'idle' ? (

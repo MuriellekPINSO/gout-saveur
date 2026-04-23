@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Phone, Mail, MapPin } from 'lucide-react';
 import { COMPANY_INFO } from '../constants';
+import footerLogo from '../images/lojau.png';
 
 const Footer: React.FC = () => {
   return (
@@ -11,7 +12,11 @@ const Footer: React.FC = () => {
           
           {/* Column 1: Brand */}
           <div>
-            <h3 className="font-serif text-2xl font-bold text-spice-400 mb-4">{COMPANY_INFO.name}</h3>
+            <img
+              src={footerLogo}
+              alt="Logo Goûts & Saveurs"
+              className="h-20 w-auto mb-4"
+            />
             <p className="text-nature-200 mb-4">
               Des épices 100% naturelles, sans additifs, pour sublimer vos plats et prendre soin de votre santé. L'authenticité du goût avant tout.
             </p>

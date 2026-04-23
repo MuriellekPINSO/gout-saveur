@@ -90,12 +90,12 @@ export const PRODUCTS: Product[] = [
 export const COMPANY_INFO = {
   name: "Goûts & Saveurs",
   email: "contact@goutsetsaveurs.com",
-  phone: "+229 59 35 09 35",
+  phone: "+229 01 66 77 31 93",
   address: "Cotonou, Bénin",
   socials: {
     facebook: "#",
     instagram: "#",
-    whatsapp: "https://wa.me/22959350935"
+    whatsapp: "https://wa.me/2290166773193"
   }
 };
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Leaf, Users, ShieldCheck, Globe } from 'lucide-react';
+import boiteImage from '../images/boite.png';
+import preparationImage from '../images/preparation.png';
 
 const About: React.FC = () => {
   return (
@@ -31,8 +33,8 @@ const About: React.FC = () => {
           </div>
           <div className="rounded-lg overflow-hidden shadow-xl">
              <img 
-              src="https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-              alt="Marché local d'épices" 
+              src={boiteImage}
+              alt="Nos produits Goûts & Saveurs"
               className="w-full h-full object-cover"
             />
           </div>
@@ -86,7 +88,7 @@ const About: React.FC = () => {
                  <p className="text-gray-600 text-sm">Choix rigoureux des matières premières fraîches et saines.</p>
               </div>
               <div className="relative">
-                 <img src="https://images.unsplash.com/photo-1589927986089-35812378d995?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Séchage" className="w-full h-48 object-cover rounded-md mb-4" />
+                  <img src={preparationImage} alt="Préparation" className="w-full h-48 object-cover rounded-md mb-4" />
                  <h3 className="font-bold text-xl mb-2">2. Préparation</h3>
                  <p className="text-gray-600 text-sm">Nettoyage minutieux et séchage solaire ou au four doux.</p>
               </div>
