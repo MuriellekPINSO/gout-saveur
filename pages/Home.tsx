@@ -123,7 +123,7 @@ const Home: React.FC = () => {
       {/* Newsletter */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl font-bold text-gray-900 mb-4">Rejoignez la famille Goûts & Saveurs</h2>
+          <h2 className="font-awelier text-3xl font-bold text-gray-900 mb-4">Rejoignez la famille Goûts & Saveurs</h2>
           <p className="text-gray-600 mb-8">Recevez nos recettes exclusives et offres spéciales directement dans votre boîte mail.</p>
           <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e) => e.preventDefault()}>
             <input 

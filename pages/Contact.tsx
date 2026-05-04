@@ -26,13 +26,15 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="text-center mb-16">
-          <h1 className="font-serif text-4xl font-bold text-gray-900 mb-4">Contactez-nous</h1>
-          <p className="text-gray-600">Une question sur nos produits ou une commande ? Nous sommes là pour vous.</p>
-        </div>
+    <div className="bg-white min-h-screen">
+      <div className="bg-nature-800 text-white py-20 text-center">
+        <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Contactez-nous</h1>
+        <p className="text-xl max-w-2xl mx-auto px-4 text-nature-100">
+          Une question sur nos produits ou une commande ? Nous sommes là pour vous.
+        </p>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           
